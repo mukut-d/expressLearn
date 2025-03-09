@@ -1,5 +1,10 @@
-<ul class="people_list">
+
+<div class="container">
+
   {{#each blogs}}
-    <li>{{this.title}}</li>
+<a href="/blogpost/{{this.slug}}" >{{this.title}}</a>
+<br>
+    {{!-- <li>{{this.title}}</li> --}}
   {{/each}}
-</ul>
+
+</div>
