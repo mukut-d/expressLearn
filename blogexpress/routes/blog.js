@@ -6,6 +6,13 @@ const blogs = require("../data/blogs");
 router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../templates/index.html"));
 });
+router.get("/blog", (req, res) => {
+  // res.sendFile(path.join(__dirname, "../templates/index.html"));
+
+  res.render("blogHome", {
+    blogs: blogs,
+  });
+});
 
 router.get("/blog", (req, res) => {
   blogs.forEach((e) => {
